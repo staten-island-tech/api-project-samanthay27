@@ -1,0 +1,52 @@
+html,
+body,
+*{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.header {
+    align-items: center;
+    text-align: center;
+    background-color: var(--primary);
+}
+
+
+:root{
+    --green1: #CAD2C5;
+    --green2: #84A98C;
+    --green3: #52796F;
+    --green4: #354F52;
+    --green5: #2F3E46;
+
+
+    --white1: #edede9;
+    --white2: #d6ccc2;
+    --white3: #f5ebe0;
+    --white4: #e3d5ca;
+    --white5: #d5bdaf;
+}
+
+
+.theme1 {
+    --primary:var(--green1);
+    --secondary:var(--green2);
+    --tetriary:var(--green3);
+    --quaternary:var(--green4);
+    --quinary:var(--green5)
+}
+
+
+.theme2{
+    --primary:var(--white1);
+    --secondary:var(--white2);
+    --tetriary:var(--white3);
+    --quaternary:var(--white4);
+    --quinary:var(--white5);
+}
+
+
+

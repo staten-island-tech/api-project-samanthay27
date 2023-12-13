@@ -5,15 +5,13 @@ body,
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
+};
 
 .header {
     align-items: center;
     text-align: center;
     background-color: var(--primary);
-}
-
+};
 
 :root{
     --green1: #CAD2C5;
@@ -23,13 +21,14 @@ body,
     --green5: #2F3E46;
 
 
+
+
     --white1: #edede9;
     --white2: #d6ccc2;
     --white3: #f5ebe0;
     --white4: #e3d5ca;
     --white5: #d5bdaf;
-}
-
+};
 
 .theme1 {
     --primary:var(--green1);
@@ -37,8 +36,7 @@ body,
     --tetriary:var(--green3);
     --quaternary:var(--green4);
     --quinary:var(--green5)
-}
-
+};
 
 .theme2{
     --primary:var(--white1);
@@ -46,7 +44,9 @@ body,
     --tetriary:var(--white3);
     --quaternary:var(--white4);
     --quinary:var(--white5);
-}
+};
 
-
+.container{
+    align-items: center;
+};
 

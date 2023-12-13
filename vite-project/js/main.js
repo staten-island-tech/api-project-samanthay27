@@ -1,11 +1,15 @@
-/* import "../styles/style.css" */
+import "../styles/style.css"
 
-const URL = `https://gsi.fly.dev/banners`;
+const URL = `https://gsi.fly.dev/characters`;
+
+const DOMselectors = {
+    card: document.querySelector('#card'),
+}
 
 async function getData(URL) {
     try {
         const response = await fetch (URL);
-        //requesting a response REST API's 
+        //requesting a response REST API's
         if (response.status != 200) {
             throw new Error (response.statusText);
         }
@@ -18,4 +22,3 @@ async function getData(URL) {
     //similar to ifelse
 }
 getData(URL);
-

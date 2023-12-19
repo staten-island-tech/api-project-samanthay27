@@ -43,8 +43,13 @@
 }
 
 h1 {
-  font-size: 3.2rem;
+  font-size: var(--h1); 
   line-height: 1.1;
+  padding: 10px;
+  margin: auto;
+  text-align: center;
+  border-radius: 40px;
+  color: var(--green5);
 }
 
 body {
@@ -53,8 +58,21 @@ body {
 }
 
 .container{
-  background-color: #fff;
+  background-color: var(--green2);
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  flex-wrap: wrap;
 }
+
+.button{
+  border-radius: 25px;
+  background-color: var(--green1);
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+}
+
 .card {
-  padding: 2em;
+  padding: 2rem;
 }

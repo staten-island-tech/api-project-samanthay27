@@ -1,14 +1,25 @@
 import '../styles/style.css'
-
+import { DOMselectors } from './domselectors';
+//need to import domselectors 
 const URL ="https://gsi.fly.dev/";
+
+function makecard (){
+    let a = DOMselectors.name.value;
+    let b = DOMselectors.rarity.value;
+    let c = DOMselectors.vision.value;
+    let d = DOMselectors.weapon.value;
+
+    DOMselectors.card.insertAdjacentElement("beforeend",
+    ' ')
+}
 
 document.querySelector('#app').innerHTML = `
   <div>
-  <h1>hiiii</h1>
+  <h2>hiiii</h2>
    </div>
 `
 
-/* async function getData(URL) {
+async function getData(URL) {
     try {
         const response = await fetch (URL);
         //requesting a response REST API's 
@@ -23,4 +34,4 @@ document.querySelector('#app').innerHTML = `
     }
     //similar to ifelse
 }
-getData(URL); */
+getData(URL);

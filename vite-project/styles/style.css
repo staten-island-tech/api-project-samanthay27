@@ -26,7 +26,7 @@
     --h5: 1.5rem; 
 }
 
-.normaltheme {
+.greentheme {
   --primary:var(--green1);
   --secondary:var(--green2);
   --tertiary:var(--green3);
@@ -34,7 +34,7 @@
   --quinary:var(--green5);
 };
 
-.changedtheme{
+.whitetheme{
   --primary:var(--white1);
   --secondary:var(--white2);
   --tertiary:var(--white3);
@@ -42,6 +42,9 @@
   --quinary:var(--white5);
 }
 
+.header{
+  align-items: center;
+}
 h1 {
   font-size: var(--h1); 
   line-height: 1.1;
@@ -52,13 +55,30 @@ h1 {
   color: var(--green5);
 }
 
+h2{
+  font-size: var(--h2);
+}
+
+h3{
+  font-size: var(--h3);
+}
+
+h4{
+  font-size: var(--h4);
+}
+
+h5{
+  font-size: var(--h5);
+}
+
 body {
+  background-color: var(--tertiary);
   margin: 0;
   display: flex;
 }
 
 .container{
-  background-color: var(--green2);
+  background-color: var(--secondary);
   display: flex;
   justify-content: space-evenly;
   text-align: center;
@@ -67,12 +87,14 @@ body {
 
 .button{
   border-radius: 25px;
-  background-color: var(--green1);
+  background-color: var(--primary);
   padding: 20px;
-  width: 200px;
-  height: 150px;
+  width: 100px;
+  height: 80px;
 }
 
 .card {
   padding: 2rem;
+  width: 200px;
+  height: 150px;
 }

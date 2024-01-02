@@ -4,7 +4,8 @@ const DOMselectors = {
     name: document.querySelector("#name"),
     rarity: document.querySelector('#rarity'),
     weapon: document.querySelector('#weapon'),
-    vision: document.querySelector('#vision')
+    vision: document.querySelector('#vision'),
+    buttons: document.querySelectorAll(".buttons"),
 }
 
 export {DOMselectors};

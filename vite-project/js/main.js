@@ -20,19 +20,19 @@ function makecard (){
     </div>`);
 }
 
-// async function getData(URL) {
-//     try {
-//         const response = await fetch (URL);
-//         //requesting a response REST API's 
-//         if (response.status != 200) {
-//             throw new Error (response.statusText);
-//         }
-//         const data = await response.json();
-//         //converts response to JSON
-//         document.querySelector("h1").textContent = data.content;
-//     } catch (error) {
-//         console.log(error, "gg")
-//     }
-//     //similar to ifelse
-// }
-// getData(URL);
+ async function getData(URL) {
+     try {
+         const response = await fetch (URL);
+        //requesting a response REST API's 
+        if (response.status != 200) {
+            throw new Error (response.statusText);
+         }
+        const data = await response.json();
+         //converts response to JSON
+        document.querySelector("h1").textContent = data.content;
+    } catch (error) {
+         console.log(error, "gg")
+     }
+     //similar to ifelse
+ }
+ getData(URL);

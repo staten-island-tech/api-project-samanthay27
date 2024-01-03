@@ -1,11 +1,11 @@
 const DOMselectors = {
-    container: document.querySelector('.container'),
+    changetheme: document.querySelector("#changetheme"),
+    cardcontainer: document.querySelector('.cardcontainer'),
     card: document.querySelector('#card'),
-    name: document.querySelector("#name"),
-    rarity: document.querySelector('#rarity'),
-    weapon: document.querySelector('#weapon'),
-    vision: document.querySelector('#vision'),
-    buttons: document.querySelectorAll(".buttons"),
-}
-
-export {DOMselectors};
+ }
+ 
+ export {DOMselectors};
+ 
+ 
+ 
+ 

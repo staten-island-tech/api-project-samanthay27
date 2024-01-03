@@ -1,38 +1,47 @@
-import '../styles/style.css'
+import '../styles/style.css';
 import { DOMselectors } from './domselectors';
-//need to import domselectors 
-const URL ="https://gsi.fly.dev/";
 
-DOMselectors.container.addEventListener("")
 
-function makecard (){
-    let a = DOMselectors.name.value;
-    let b = DOMselectors.rarity.value;
-    let c = DOMselectors.vision.value;
-    let d = DOMselectors.weapon.value;
+const URL = 'https://genshinlist.com/api/characters';
 
-    DOMselectors.card.insertAdjacentElement("beforeend",
-    `<div class = "card">
-    <h3> name: ${a}</h3>
-    <h3> rarity: ${b}</h3>
-    <h3> vision: ${c}</h3>
-    <h3> weapon: ${d}</h3>
-    </div>`);
+async function getData(url) {
+   try {
+       const response = await fetch(URL);
+       //requesting a response to REST API's
+
+       if (response.status !== 200) {
+           throw new Error(response.statusText);
+       }
+
+       const data = await response.json();
+       //converts response to JSON
+
+       data.forEach(obj => {
+           DOMselectors.cardcontainer.insertAdjacentHTML(
+               "beforeend",
+               `<div class="card">
+                   <h2 class="name">${obj.name}</h2>
+                   <h3 class="description">${obj.description}</h3>
+                   <h3 class="vision">${obj.vision}</h3>
+                   <h3 class="weapon">${obj.weapon}</h3>
+               </div>`
+           );
+       });
+
+   } catch (error) {
+       console.log(error, "uhm idk dont ask me");
+   }
 }
+//similar to an ifelse statement
 
- async function getData(URL) {
-     try {
-         const response = await fetch (URL);
-        //requesting a response REST API's 
-        if (response.status != 200) {
-            throw new Error (response.statusText);
-         }
-        const data = await response.json();
-         //converts response to JSON
-        document.querySelector("h1").textContent = data.content;
-    } catch (error) {
-         console.log(error, "gg")
-     }
-     //similar to ifelse
- }
- getData(URL);
+getData(URL);
+
+DOMselectors.changetheme.addEventListener("click", function () {
+   if (document.body.classList.contains("greentheme")) {
+       document.body.classList.add("whitetheme");
+       document.body.classList.remove("greentheme");
+   } else {
+       document.body.classList.add("greentheme");
+       document.body.classList.remove("whitetheme");
+   }
+});

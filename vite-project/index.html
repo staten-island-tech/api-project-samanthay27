@@ -1,28 +1,38 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>API project</title>
-  </head>
-  <body>
-    <div id="app">
-      <div class="header">      
-        <h1>genshin characters</h1>
-      </div>
-      <div class="container">
-        <button class="changetheme">Theme</button>
-        <button class="pyro">pyro</button>
-        <button class="hydro">hydro</button>
-        <button class="electro">electro</button>
-        <button class="cryo">cryo</button>
-        <button class="dendro">dendro</button>
-        <button class="anemo">anemo</button>
-        <button class="geo">geo</button>
-        <div class="card"></div>
-      </div>
-    </div>
-    <script type="module" src="./js/main.js"></script>
-  </body>
+ <head>
+   <meta charset="UTF-8" />
+   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>API project</title>
+ </head>
+ <body class="greenmode">
+   <div class="app">
+     <h1 class="title">Genshin Characters</h1>
+     <div class="main">
+       <button class="changetheme">Change Theme</button>
+       <button class="vision">Pyro</button>
+       <button class="vision">Hydro</button>
+       <button class="vision">Anemo</button>
+       <button class="vision">Electro</button>
+       <button class="vision">Dendro</button>
+       <button class="vision">Cryo</button>
+       <button class="vision">Geo</button>
+
+       <form action="" id="form">
+         <label for="searchfor"> Search here</label>
+         <input type="text" name="searchfor" id="searchfor">
+         <input type="submit" value="Enter">
+       </form>
+        <!-- a form collects whatever the user inputs into the blanks, has multiple ways the user can input the data (text, checkbox, submit, etc.)-->
+        <div class="cardcontainer">
+         <!--      card should include name, description, vision, weapon, birthday, and rarity  -->
+        </div>
+     </div>
+   </div>
+   <script type="module" src="./js/main.js"></script>
+ </body>
 </html>
+
+
+

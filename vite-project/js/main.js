@@ -4,7 +4,7 @@ import { DOMselectors } from './domselectors';
 
 const URL = 'https://genshinlist.com/api/characters';
 
-async function getData(url) {
+async function getData(URL) {
    try {
        const response = await fetch(URL);
        //requesting a response to REST API's
@@ -27,8 +27,7 @@ async function getData(url) {
                </div>`
            );
        });
-
-   } catch (error) {
+    }catch (error) {
        console.log(error, "uhm idk dont ask me");
    }
 }
@@ -37,11 +36,12 @@ async function getData(url) {
 getData(URL);
 
 DOMselectors.changetheme.addEventListener("click", function () {
-   if (document.body.classList.contains("greentheme")) {
-       document.body.classList.add("whitetheme");
-       document.body.classList.remove("greentheme");
-   } else {
-       document.body.classList.add("greentheme");
-       document.body.classList.remove("whitetheme");
-   }
-});
+    if (document.body.classList.contains("greentheme")) {
+      document.body.classList.add("whitetheme");
+      document.body.classList.remove("greentheme");
+    } else {
+      document.body.classList.add("greentheme");
+      document.body.classList.remove("whitetheme");
+    }
+   });
+   

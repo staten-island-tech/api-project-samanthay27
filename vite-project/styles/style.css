@@ -73,9 +73,10 @@ h5{
 
 .changetheme, .vision{
   border-radius: 12px;
-  padding: 15px 32px;
+  padding: 20px 48px;
   text-align: center;
   background-color: var(--secondary);
+  align-items: center;
 }
 
 .main{
